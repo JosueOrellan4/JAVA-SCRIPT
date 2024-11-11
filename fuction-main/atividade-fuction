@@ -1,0 +1,69 @@
+/*1]Imprima a tabuada do 5 (5 x 1 até 5 x 10) utilizando um laço de repetição.
+ 
+function imprimirtabuadado5() {
+   let cont=1
+  while(cont<=10){
+    console.log (5,"x", cont, 5 * cont)
+    cont++
+  }
+}
+imprimirtabuadado5()
+2]Calcule a soma de todos os números de 1 a 100 utilizando um laço de repetição.
+ 
+ function soma100(soma){
+   con=0
+   while(i<100){
+    con++
+    console.log(soma=soma+con)
+   }
+ }
+ soma100(0)*/
+ 
+//3]Calcule a soma dos dígitos de um número fornecido pelo usuário utilizando um laço de repetição.
+ 
+ function calcular(num1){
+   valorF=num1.length
+  cont=0
+   soma=0
+  while(cont<valorF){
+    soma+=parseInt(num1[cont])
+     cont++
+   }
+   console.log(soma)
+ }
+ calcular(prompt("Digite um valor"))
+ 
+ 
+/*4]Imprima os primeiros 10 números da sequência de Fibonacci utilizando um laço de repetição.
+ 
+ function Fibo(n){
+   i=0
+   numero1=0
+   numero2=1
+   Fibonacci=0
+ 
+   while(i!=n){
+     Fibonacci=numero1+numero2
+     numero1=numero2
+     numero2=Fibonacci
+     n=n-1
+     console.log(Fibonacci)
+   }
+ }
+ Fibo (prompt("Digite um valor para calcular a sequência de Fibonacci"))
+ 
+ //5]Implemente um programa que inverte uma String fornecida pelo usuário utilizando um laço de repetição.(desafio)
+ 
+ function inverterString(str) {
+     stringInvertida = ''
+    i = str.length - 1 
+    while (i >= 0) {
+         stringInvertida += str[i]
+        i--
+     }
+     console.log(stringInvertida)
+ }
+ inverterString (prompt('Digite uma string para inverter:'))
+ 
+
+ 

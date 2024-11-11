@@ -1,0 +1,407 @@
+function portamisteriosafrente (){ 
+alert(nome+' entrou em uma sala e encontrou um bau misterioso e nesse bau havia  3 itens, uma espada longa e dourada, uma armadura, linda e reluzente como as estrelas, um cogumelo, vermelho e muito misterioso.')
+escolhaItem = prompt ('Qual o primeiro item que você gostaria de pegar: \n1- Espada longa e dourada. \n2- armadura linda e reluzente como as estrelas. \n3- cogumelo misterioso. \nQual voce escolhe?')
+
+while (escolhaItem < 1 || escolhaItem > 3) {
+  escolhaItem = prompt ('para de graça fih, escolhe um item logokkk \n1- Espada longa e dourada. \n2- armadura linda e reluzente com as estrelas. \n3- cogumelo misterioso. \nQual voce escolhe?')
+}
+alert('Ao escolher o item do bau se fechou e você não conseguiu mais abrir ele para pegar o restante dos itens')
+return escolhaItem
+}
+function portadireita (){
+ alert ('voce decide ir pela porta direita, caminhando mais a frente voce se depara com uma aranha grade do tamanho de um cachorro, ela percebe sua presença e parte pra cima de voce.')
+  alert ('Hora da batalha.')
+  
+  atkaranha = 10
+  defaranha = 10
+  vidaaranha = 10
+  
+  
+  // Loop do combate
+ while (vidaaranha > 0 && vida > 0) {
+    // Cálculo do dano que o jogador causa à aranha
+    var danojogador = atack - defaranha;
+
+    if (danojogador > 0) {
+        vidaaranha -= danojogador;
+        alert(nome + ' deu ' + danojogador + ' de dano na aranha.');
+    } else {
+        alert(nome + ' não conseguiu dar dano na aranha.');
+    }
+
+    // Verifica se a aranha foi derrotada
+    if (vidaaranha <= 0) {
+        alert('A aranha foi derrotada!');
+        break;
+    }
+
+    // Cálculo do dano que a aranha causa ao jogador
+    var danoaranha = atkaranha - defesa;
+
+    if (danoaranha > 0) {
+        vida -= danoaranha;
+        alert('A aranha deu ' + danoaranha + ' de dano em ' + nome + '.');
+    } else {
+        alert('A aranha não conseguiu dar dano em ' + nome + '.');
+    }
+
+    // Verifica se o jogador foi derrotado
+    if (vida <= 0) {
+        alert(nome + ' foi derrotado...');
+        break
+    }
+}
+        alert('A aranha foi derrotada, e a sua coragem brilhou! \natack: '+atack+'\ndefesa: '+defesa+'\nvida: '+vida)
+
+        alert('Após a vitoriosa luta contra a aranha, você se depara com duas portas. A primeira, com aspecto enferrujado, é robusta e feita de ferro maciço, coberta por uma camada espessa de ferrugem que dá um tom avermelhado. A segunda é de tecido mágico, uma cortina pesada e rica, pendurada em uma estrutura de madeira envelhecida. O tecido é de um tom profundo de púrpura, com padrões dourados que parecem brilhar suavemente.')
+
+
+}
+function portaenferrujada(){
+  alert('Você decide seguir pela porta enferrujada. Empurrando o pesado portal de ferro, com um estrondo metálico, ele se abre, revelando uma sala iluminada por uma luz fraca. No interior, você sente uma presença ameaçadora que parece emanar das sombras ao redor. Antes que você tenha tempo de se preparar, um estrondo ressoa pelo ambiente e um inimigo se materializa à sua frente:')
+  alert('Com um barulho metálico ensurdecedor, o Guardião de Ferro avança das sombras. Sua armadura enferrujada e seus olhos brilhando em um tom avermelhado indicam que ele está pronto para atacar.')
+  alert('hora da batalha.')
+  atkguardiao = 12
+  defguardiao = 12
+  vidaguardiao = 15
+
+  while(vidaguardiao>0 && vida>0){
+    var danojogador = atack - defguardiao
+
+    if (danojogador > 0){
+
+      vidaguardiao -= danojogador
+
+      alert(nome + ' deu ' + danojogador + ' de dano no guardiao.')
+    }else{
+      alert(nome + ' não conseguiu dar dano no guardiao.')
+    }
+    if (vidaguardiao <=0){
+      alert('O guardiao foi derrotado!')
+      break
+    }
+    var danoguardiao = atkguardiao - defesa
+
+    if (danoguardiao > 0){
+
+      vida -= danoguardiao
+
+      alert('O guardião deu ' + danoguardiao + ' de dano em ' + nome + '.')
+    }else{
+      alert('O guardião não conseguiu dar dano em ' + nome + '.')
+
+    }
+    if(vida<=0){
+      alert(nome + ' foi derrotado...')
+      break
+    }  
+  }
+  alert('O guardião foi derrotado, e a sua coragem brilhou novamente! \natack: '+atack+'\ndefesa: '+defesa+'\nvida: '+vida)
+  alert('Não parece ter mais nada a se fazer nessa sala então voce decide voltar e ir pela porta com aspecto de tecido magico.')
+}
+function portatecido(){
+  alert(nome+' empurrou a pesada cortina de tecido mágico que pendia diante da entrada de um antigo templo. O tecido, que brilhava em tons de púrpura e prata, parecia pulsar com uma energia própria. Apos atravessar a cortina, o ambiente mudou abruptamente. O espaço à sua frente era um vasto campo nebuloso, onde a névoa cintilava com um brilho purpúreo, refletindo a luz de maneira misteriosa.')
+  alert('De repente, uma figura surgiu da névoa. Era um ser envolto em uma aura de tecido mágico, com uma forma vaga e fluida, como se fosse feito da própria névoa que o cercava. Seus olhos brilhavam com uma luz intensa e púrpura. Era um inimigo imponente, que parecia tão etéreo e mutável quanto o ambiente ao redor.')
+  alert('Com movimentos rápidos e implacáveis, o ser atacou diretamente, seus ataques parecendo cortar o ar com o mesmo brilho mágico que emanava de seu corpo. ' +nome+' imediatamente que estava diante de um adversário hostil, determinado a impedi-lo de prosseguir.')
+  alert('Hora da batalha.')
+  
+  atkespiritotecido = 11
+  defespiritotecido = 11
+  vidaespiritotecido = 16
+  while (vidaespiritotecido > 0 && vida > 0){
+    var danojogador = atack - defespiritotecido
+
+    if (danojogador > 0){
+      vidaespiritotecido -= danojogador
+
+      alert(nome + ' deu ' +danojogador+ ' de dano no espirito do tecido.')
+
+    }else{nome+' não conseguiu dar dano no espirito do tecido.'}
+    if (vidaespiritotecido <= 0){
+      alert('O espirito do tecido foi derrotado!')
+      break
+    }
+    var danoespiritotecido = atkespiritotecido - defesa
+    
+    if (danoespiritotecido > 0){
+      vida -= danoespiritotecido
+
+      alert('O espirito de tecido deu '+ danoespiritotecido+' de dano em '+nome)
+    }else{
+      alert('O espirito de tecido não conseguiu dar dano em '+nome+'.')
+    }
+    if(vida<=0){
+      alert(nome+' foi derrotado...')
+      break
+    }
+  }
+  alert('Com coragem e força, voce venceu o inimigo! Vamos em frente!\natack: '+atack+'\ndefesa: '+defesa+'\nvida: '+vida)
+  alert('Após a batalha, '+nome+' observou o Espírito do Tecido desaparecer na névoa. De repente, no lugar onde o inimigo havia caído, um baú antigo começou a se formar. O baú tinha um aspecto de artefato mitológico, com entalhes de serpentes e símbolos misteriosos decorando suas laterais.')
+  
+
+}
+function bau(){
+  alert(nome+' Abre o bau e nesse bau havia 3 elixir com cores diferentes, vermelho, azul e verde. ')
+  escolhaitemBau2 = prompt ('Qual elixir voce gostaria de pegar e beber? \n1- elixir vermelho. \n2- elixir azul. \n3- elixir verde.')
+while (escolhaitemBau2 < 1 || escolhaitemBau2 > 3){
+  escolhaitemBau2 = prompt('para de graça meu rapaz, escolha um elixir logokk \n1- elixir vermelho. \n2- elixir azul \n3- elixir verde.')
+}
+alert ('Ao escolher o elixir o bau se fechou e você não conseguiu  mais abrir ele para pegar o restante dos elixir')
+return escolhaitemBau2
+}
+function portaAgua(){
+  alert('Ao abrir a porta, '+nome+' sente um frio úmido. As paredes estão cobertas de algas e corais, e uma corrente de água flui rapidamente pelo local. No centro da sala, surge uma serpente aquática gigantesca, com escamas brilhantes e olhos penetrantes. Ela nada habilidosamente pela água e avança em direção a ' + nome + '.')
+  alert('Hora da batalha.')
+  atkserpente = 15
+  defserpente = 13
+  vidaserpente = 20
+  
+  while (vidaserpente > 0 && vida > 0){
+    var danojogador = atack - defserpente
+  
+    if (danojogador > 0){
+      vidaserpente -= danojogador
+      alert(nome + ' deu ' +danojogador+' de dano na serpente.')
+      
+    }else{nome+' não conseguiu dar dano na serpente.'}
+    
+    if(vidaserpente <= 0){
+      alert('A serpente foi derrotada!')
+      break
+    }
+    var danoserpente = atkserpente - defesa
+
+    if (danoserpente > 0){
+      vida -= danoserpente
+
+      alert('A serpente deu '+ danoserpente+' de dano em '+nome)
+
+    }else{
+      alert('A serpente não conseguiu dar dano em '+nome)
+    }
+    if (vida<=0){
+      alert(nome+' foi derrotado...')
+      break
+    }
+  }
+  alert(nome+' derrota a serpente aquática gigantesca, e seu corpo se dissolve em água. Ao final da batalha, você encontra um anel com um símbolo de água entre os destroços.')
+  
+}
+function portaTerra() {
+  alert('Ao abrir a porta, '+nome+' é recebido por um ambiente subterrâneo cheio de rochas e estalactites. O chão parece instável e rochas se movem lentamente. No centro da sala, surge um enorme golem de pedra, com uma força impressionante e uma pele sólida como rocha. O golem avança em direção a ' + nome + '.');
+  alert('Hora da batalha.')
+
+  // Atributos do golem
+  var atkGolem = 15
+  var defGolem = 13
+  var vidaGolem = 20
+
+  while (vidaGolem > 0 && vida > 0) {
+    // Cálculo do dano causado pelo jogador
+    var danoJogador = atack - defGolem
+
+    if (danoJogador > 0) {
+      vidaGolem -= danoJogador;
+      alert(nome + ' deu ' + danoJogador + ' de dano no golem.');
+    } else {
+      alert(nome + ' não conseguiu dar dano no golem.');
+    }
+
+    if (vidaGolem <= 0) {
+      alert('O golem foi derrotado!')
+      break;
+    }
+
+    // Cálculo do dano causado pelo golem
+    var danoGolem = atkGolem - defesa
+
+    if (danoGolem > 0) {
+      vida -= danoGolem;
+      alert('O golem deu ' + danoGolem + ' de dano em ' + nome);
+    } else {
+      alert('O golem não conseguiu dar dano em ' + nome);
+    }
+
+    if (vida <= 0) {
+      alert(nome + ' foi derrotado...')
+      break
+    }
+  }
+
+  alert(nome + ' derrota o golem de pedra, e seu corpo se desintegra em pedaços de rocha. Ao final da batalha, você encontra um anel com um símbolo de pedra entre os destroços.');
+}
+function portaFogo() {
+  alert('Ao abrir a porta, '+nome+' é envolvido por um calor intenso. O ambiente está cheio de chamas e fumaça. No centro da sala, surge um elemental de fogo, com chamas dançantes e uma aura de calor abrasador. O elemental avança em direção a ' + nome + '.')
+  alert('Hora da batalha.');
+
+  // Atributos do elemental de fogo
+  var atkElemental = 15;
+  var defElemental = 13;
+  var vidaElemental = 20;
+
+  while (vidaElemental > 0 && vida > 0) {
+    // Cálculo do dano causado pelo jogador
+    var danoJogador = atack - defElemental
+
+    if (danoJogador > 0) {
+      vidaElemental -= danoJogador
+      alert(nome + ' deu ' + danoJogador + ' de dano no elemental de fogo.')
+    } else {
+      alert(nome + ' não conseguiu dar dano no elemental de fogo.')
+    }
+
+    if (vidaElemental <= 0) {
+      alert('O elemental de fogo foi derrotado!')
+      break
+    }
+
+    // Cálculo do dano causado pelo elemental de fogo
+    var danoElemental = atkElemental - defesa
+
+    if (danoElemental > 0) {
+      vida -= danoElemental
+      alert('O elemental de fogo deu ' + danoElemental + ' de dano em ' + nome)
+    } else {
+      alert('O elemental de fogo não conseguiu dar dano em ' + nome)
+    }
+
+    if (vida <= 0) {
+      alert(nome + ' foi derrotado...')
+      break
+    }
+  }
+
+  alert(nome + ' derrota o elemental de fogo, e as chamas ao seu redor se apagam. Ao final da batalha, você encontra um anel com um símbolo de fogo entre os destroços.')
+}
+function batalhafinal(){
+  dragonAtaque= 16
+  dragonDefesa=16
+  dragonVida=30
+  
+  while (dragonVida > 0 && vida > 0){
+   var danojogador = atack - dragonDefesa
+
+   if (danojogador > 0){
+    dragonVida -= danojogador
+    alert(nome+ ' deu '+danojogador+' de dano no dragão.')
+   }else {
+    alert(nome+ ' não conseguiu dar dano no dragão.')
+   }
+   if(dragonVida <= 0){
+    alert('O dragão foi derrotado!')
+    alert('Voce saiu da Masmorra Parabens!.')
+    break
+   }
+   var danoDragao = dragonAtaque - defesa
+
+   if(danoDragao > 0){
+    vida -= danoDragao
+    alert('O dragão deu ' +danoDragao+' de dano em '+nome+'.')
+
+   }else('O dragão não conseguiu dar dano em '+nome+'.')
+   if (vida<=0){
+    alert(nome+' foi derrotado...')
+    break
+   }
+
+  }
+}
+
+
+var nome = ''
+var atack = 15
+var defesa = 10
+var vida = 30
+function mostrarStatus() {
+  alert('Seu status atual é: \natack: ' + atack + '\ndefesa: ' + defesa + '\nvida: ' + vida);
+}
+ 
+
+nome = prompt('ola jovem aventureiro, me diga qual o seu nome')
+alert(nome + ' seja bem vindo a caverna  do DRAGÃO...')
+
+alert('Você caiu em um buraco e ao se levantar  você  se deparou com a seguinte escolha, na sua frente você nota uma porta grande com madeira avermelhada  e com o aspecto de velha caindo aos pedaços, e do lado direito você nota uma outra porta com o mesmo aspecto caindo aos pedaços.')
+
+
+escolha = prompt('Qual vai ser a sua decisão: \n1-voce escolhe seguir pela porta da frente. \n2-voce escolhe seguir pela porta da direita.')
+
+
+if (escolha == '1'){
+  item = portamisteriosafrente()
+  
+
+  if (item == 1){
+    atack = atack + 5
+    alert('Ao segurar a espada voce sente uma força de vontade percorrendo seu corpo com sabedoria e destreza do rei antigo') 
+  } else if (item == 2) {
+    defesa = defesa + 10
+    alert('Ao terminar de colocar a armadura você se sente intangivel') 
+  }else if (item == 3){
+    vida = vida + 30
+    alert('Ao criar coragem de comer o cogumelo magico, ele te faz se sentir melhor e maior') 
+  }
+
+  alert('Você sente sua força aumentando \n\natack:'+atack+'\ndefesa:'+ defesa+ '\nvida:' + vida)
+  alert('voce decide voltar pois não tem mais nenhuma porta na sala e decide ir pela porta da direita.')
+  portadireita()
+
+}else if(escolha == '2'){
+portadireita()
+}
+
+escolha = prompt('Qual vai ser sua decisão: \n1-Voce escolhe seguir pela porta Enferrujada.\n2-Voce escolher seguir pela porta com tecido magico.')
+
+if(escolha == '1'){
+   portaenferrujada()
+
+   portatecido()
+   
+}else if(escolha == '2'){
+   portatecido()
+   var item2=bau()
+   if(item2 ==1){
+    atack = atack + 10
+    alert('Apos beber o elixir vermelho '+nome+' sente sua força aumentando.')
+    alert(nome+' ganhou mais 10 de atack.')
+   }else if (item2 ==2){
+    defesa= defesa + 10
+    alert('Apos beber o elixir azul '+nome+'sente sua defesa aumentando.')
+    alert(nome+' ganhou mais 10 de defesa.')
+   }else if (item2 == 3){
+    vida = vida + 10
+    alert('Apos beber o elixir verde '+nome+' sente sua saude aumentando.')
+    alert(nome+' ganhou mais 10 de vida.')
+   }
+   
+   }
+
+
+   alert(nome + ' continua sua jornada em busca da saída desta masmorra, mas acaba se deparando com tres portas. A primeira possui um símbolo elementar de água, a segunda possui um símbolo elementar de fogo, e a terceira possui um símbolo elementar de terra.')   
+   escolha = prompt ('Qual porta voce escolhe entrar? \n1-Porta com simbolo elementar de agua. \n2-Porta com simbolo elementar de fogo. \n3-Porta com simbolo elementar de terra.')
+
+
+if(escolha =='1'){
+  portaAgua()
+  vida + 5
+  alert(nome + ' coloca o anel e sente sua saude aumentar.')
+  alert(nome + ' ganhou mais 5 de vida.')
+  mostrarStatus()
+}else if (escolha == '2'){
+  portaFogo()
+  atack + 5
+  alert(nome + ' coloca o anel e sente sua força aumentar.')
+  alert(nome+ ' ganhou mais 5 de ataque.')  
+  mostrarStatus()
+}else if (escolha == '3'){
+  portaTerra()
+  defesa+5
+  alert(nome+ ' coloca o anel e sente sua defesa aumentar.')
+  alert(nome+ ' ganhou mais 5 de defesa.')
+  mostrarStatus()
+}
+
+alert(nome + ' continua avançando pela masmorra e, de repente, dá de cara com um imenso dragão. A criatura está imponente, com escamas brilhantes e olhos ferozes. Atrás do dragão, parece estar a saída da masmorra, mas para alcançar a liberdade, ' + nome + ' terá que derrotar o dragão primeiro.')
+alert(nome+' respira fundo e reúne toda a sua coragem. Com determinação, avança para enfrentar o dragão com tudo o que tem. Hora de lutar pela sua liberdade!')
+alert('Hora da batalha final.')
+
+batalhafinal()
